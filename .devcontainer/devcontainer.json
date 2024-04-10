@@ -1,0 +1,45 @@
+{
+  "name": "Azure Functions (Java)",
+  // "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/java:dev-21-jdk-bullseye",
+  "forwardPorts": [
+    7071,
+    10000,
+    10001,
+    10002
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {
+      "version": "4.0.5530"
+    },
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest",
+      "tflint": "latest",
+      "terragrunt": "latest"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installGradle": "true",
+      "installMaven": "true"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {
+      "version": "4.9.5"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions",
+        "dbaeumer.vscode-eslint",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle"
+      ]
+    }
+  }
+}

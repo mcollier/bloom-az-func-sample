@@ -25,3 +25,14 @@ azure_location="<azure_region>"
 2. Change directory to root of this Git project
 3. Execute: ```gradlew deploy```
 
+
+```
+# API Function
+az functionapp deployment source config-zip -g msc1-eastus -n msc1api1eastus --src function.zip  --verbose
+
+# Queue Function1
+az functionapp deployment source config-zip -g msc1-eastus -n msc1queueconsumer1eastus --src functions/queue-consumer1/build/dist/function.zip --verbose
+
+# Queue Function2
+az functionapp deployment source config-zip -g msc1-eastus -n msc1queueconsumer2eastus --src functions/queue-consumer2/build/dist/function.zip --verbose
+```

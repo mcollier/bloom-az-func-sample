@@ -1,0 +1,12 @@
+{
+    "bindings": [
+        {
+            "name": "queueMessage",
+            "type": "queueTrigger",
+            "direction": "in",
+            "queueName": "mcqueue"
+        }
+    ],
+    "entryPoint": "queueTrigger",
+    "scriptFile": "index.js"
+}
